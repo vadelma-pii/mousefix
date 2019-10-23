@@ -1,7 +1,7 @@
 # mousefix
 A very brief script to fix slow mouse movement on Raspbian. Edits /boot/cmdline.txt and creates a backup. For English text see below.
 
-Hyvin lyhyt skripti, joka korjaa hiiren hitaat liikkeete Raspbianissa. Muokkaa /boot/cmdline.txt-tiedostoa ja tekee varmuuskopion.
+Hyvin lyhyt skripti, joka korjaa hiiren hitaat liikkeet Raspbianissa. Muokkaa /boot/cmdline.txt-tiedostoa ja tekee varmuuskopion.
 
 Hiiren hitaus Raspbianissa korjautuu useissa tapauksissa sillä, että komentoriville, joka on tiedostossa /boot/cmdline.txt, lisätään parametri usbhid.mousepoll=0. Tämä skripti tarkistaa onko komentorivillä ennestään usbhid.mousepoll-parametria, ja jos ei ole, lisää sen. Jos parametri on, skripti palauttaa virheilmoituksen eikä lisää sitä uudelleen. Parametri saattaa kuitenkin olla muodossa usbdhid.mousepoll=1, jolloin ykkönen täytyy vaihtaa nollaksi. Tämä jätetään tehtäväksi käsin ja käyttäjän harkinnan varaan.
 

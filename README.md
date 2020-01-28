@@ -9,7 +9,7 @@ Jos skripti muokkaa /boot/cmdline.txt-tiedostoa, se tekee automaattisesti varmuu
 
 Raspberry Pi täytyy käynnistää uudelleen, jotta muutokset tulevat voimaan.
 
-Slow mouse movements on Raspbian are often fixed by appending the parameter usbhid.mouse=0 to /boot/cmdline.txt. This script checks if the usbhid.mousepoll parameter exists, and if not, appends it to the command line. If it does exist, the script returns an error message and doesn't add it again. The parameter may exist in the form usbhid.mousepoll=1, in which case the 1 needs to be changed to 0. This is left to be done manually at the user's discretion.
+Slow mouse movements on Raspbian are often fixed by appending the parameter usbhid.mousepoll=0 to /boot/cmdline.txt. This script checks if the usbhid.mousepoll parameter exists, and if not, appends it to the command line. If it does exist, the script returns an error message and doesn't add it again. The parameter may exist in the form usbhid.mousepoll=1, in which case the 1 needs to be changed to 0. This is left to be done manually at the user's discretion.
 
 If the script does edit /boot/cmdline.txt, it makes an automatic backup to /boot/cmdline.txt.backup.
 
